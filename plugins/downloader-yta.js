@@ -18,7 +18,7 @@ let n = lolh.result.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${n}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
 //await conn.sendFile(m.chat, lolh.result.link, `${n}.mp3`, null, m, false, { mimetype: 'audio/mp4' })    
 } catch {
-}
+    console.log('no se descargo el audio')}
 }}
 handler.command = /^fgmp3|dlmp3|getaud|yt(a|mp3)$/i
 export default handler
